@@ -43,15 +43,12 @@ export default function App() {
 				{/* back icon */}
 				<Image
 					source={require('./assets/icons/left.png')}
-					style={[
-						styles.icon,
-						{
-							position: 'absolute',
-							left: 15,
-							height: 20,
-							width: 20
-						}
-					]}
+					style={{
+						position: 'absolute',
+						left: 15,
+						height: 20,
+						width: 20
+					}}
 				/>
 				<Text style={styles.title}>Edit Profile</Text>
 			</View>
@@ -75,7 +72,7 @@ export default function App() {
 				}}>
 					<Image
 						source={require('./assets/icons/camera.png')}
-						style={[ styles.icon, {width: 20, height: 20} ]}
+						style={{ width: 20, height: 20 }}
 					/>
 				</View>
 			</View>
@@ -98,18 +95,12 @@ export default function App() {
 						</Text>
 						{/* make room for input field that have icons beside them */}
 						<View style={styles.input}>
-							<TextInput
-								editable
-								style={styles.input}
-							>
+							<TextInput editable style={styles.input}>
 								{field.input}
 							</TextInput>
 							{
-								!field.icon ? null :
-								<Image
-									source={field.icon}
-									style={styles.icon}
-								/>
+								!field.icon &&
+								<Image source={field.icon} style={styles.icon} />
 							}
 						</View>
 					</View>
