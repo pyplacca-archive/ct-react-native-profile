@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
 	StyleSheet,
@@ -7,6 +7,7 @@ import {
 	Image,
 	Button,
 	TextInput,
+	StatusBar,
 	TouchableOpacity
 } from 'react-native';
 // import addressBook from './assets/icons/address-book.png';
@@ -35,9 +36,10 @@ export default function App() {
 	let labelColor
 
 	return (
-		<View style={{marginTop: 30}}>
-			{/* page header */}
-			<View style={styles.header}>
+		<View>
+			<StatusBar />
+			{/* page nav */}
+			<View style={styles.nav}>
 				{/* back icon */}
 				<Image
 					source={require('./assets/icons/left.png')}
@@ -139,14 +141,14 @@ const styles = StyleSheet.create({
 		height: 25,
 	},
 
-	header: {
-		// position: 'relative',
+	nav: {
+		position: 'relative',
 		flexDirection: 'row',
 		alignItems: 'center',
 		paddingHorizontal: 10,
 		borderBottomColor: variables.greyLine,
 		borderBottomWidth: 3,
-		paddingTop: 5,
+		paddingTop: 10,
 		paddingBottom: 15,
 	},
 
